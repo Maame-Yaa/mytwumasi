@@ -39,7 +39,7 @@ const Projectss = () => {
       <section className="projects-section">
         <div className="overlay-content">
           <h2>View My Work</h2>
-          <a href="mytwumasi/projects" className="cta-button">
+          <a href="/projects" className="cta-button">
             See Projects
           </a>
         </div>
