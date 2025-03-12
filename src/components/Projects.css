@@ -1,0 +1,98 @@
+.projects {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--projects-bg);
+    color: var(--text-color);
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Centering the project cards */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Project Cards */
+.project-card {
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    transition: transform 0.3s ease, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: var(--card-text);
+    margin: 15px;
+    z-index: 2
+
+}
+
+/* Card hover effect */
+.project-card:hover {
+    transform: translateY(-5px);
+    border: 2px solid var(--button-hover);
+    box-shadow: 0 0 20px var(--button-hover);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.project-card p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: var(--button-bg);
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.project-card a:hover {
+    color: var(--button-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects h2 {
+        font-size: 2rem;
+    }
+
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+    }
+
+    .project-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-card p {
+        font-size: 0.9rem;
+    }
+
+    .project-card a {
+        font-size: 0.9rem;
+    }
+}

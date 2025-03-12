@@ -1,13 +1,150 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Reset & Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Emblema+One&family=League+Spartan:wght@100..900&family=Major+Mono+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Default Dark Mode */
+/* :root {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-bg: #242424;
+    --button-bg: #00bcd4;
+    --button-hover: #0097a7;
+    --link-hover: #b9dade;
+    --contact-bg: #121212;
+    --card-text: white;
+    --navbar-bg: rgba(14, 14, 14, 0.95);
+    --logo-color: #00bcd4;
+    --logo-underline: #0097a7;
+    --contact-input: #3f3f3f;
+} */
+:root {
+    --hero-bg: linear-gradient(180deg, #08090b, #181819, #292929);
+    --navbar-bg: #0D0E13;
+    --navbar-text: #E3E4E8;
+    --navbar-hover: #5E3AFF;
+    --navbar-border: #5E3AFF;
+    --text-color: #E3E4E8;
+    --subtext-color: #B5B6BA;
+    --projects-bg: #161616;
+    --card-bg: #1C1C1E;
+    --card-border: linear-gradient(135deg, #0D0E13, #37E0F5);
+    --card-heading: #5E3AFF;
+    --button-bg: #37E0F5;
+    --button-hover: linear-gradient(135deg, #37E0F5, #5E3AFF);
+    --footer-bg: #0D0E13;
+    --footer-text: #E3E4E8;
+    --footer-link: #37E0F5;
+    --contact-bg: radial-gradient(circle, #2a2a2a 15%, #161616 85%);
+    --input-bg: #0D0E13;
+    --input-border: #37E0F5;
+    --button-text: #FAFBFF;;
+    --menu-button: white;
+    --about-bg:#161616;
+    --skills-bg: #292929;
+    --skills-hd: var(--text-color)
 }
+
+/* Light Mode */
+/* html[data-theme="light"] {
+    --bg-color: #f5f5f5;
+    --projects-bg: #e1f5fe;
+    --text-color: #000000;
+    --card-bg: #1a3c4c;
+    --button-bg: #007b9e;
+    --button-hover: #005f73;
+    --link-hover: #005f73;
+    --contact-bg: white;
+    --card-text: white;
+    --navbar-bg: #00bbd4cb;
+    --logo-color: white;
+    --logo-underline: white;
+    --contact-input: #00bbd46c;
+} */
+html[data-theme="light"] {
+    --hero-bg: linear-gradient(180deg, #ffffff 20%, #f0f0f0 50%, #efece3 100%);
+    --navbar-bg: #fcfcfc;
+    --navbar-text: #1C1C1E;
+    --navbar-hover: #5E3AFF;
+    --navbar-border: #5E3AFF;
+    --text-color: #1C1C1E;
+    --subtext-color: #5E5E60;
+    --card-bg: #F1F3F7;
+    --card-border: rgba(0, 0, 0, 0.1);
+    --card-heading: #5E3AFF;
+    --button-bg: #5E3AFF;
+    --button-hover: linear-gradient(135deg, #5E3AFF, #37E0F5);
+    --footer-bg: #150b3d;
+    --footer-text: #9797aa;
+    --footer-link: #37E0F5;
+    --contact-bg: radial-gradient(circle, #ffffff 40%, #f0f0f0 60%, #cfcdc5 100%);
+    --input-bg: #c5c8cd;
+    --input-border: #5E3AFF;
+    --button-text: #FAFBFF;
+    --menu-button: #5E3AFF;
+    --projects-bg: #white;
+    --about-bg: white;
+    --skills-bg: #efece3 ;
+    --skills-hd: #4A4A4A;
+
+}
+
+/* Apply Theme Globally */
+html, body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--navbar-bg);
+    backdrop-filter: blur(8px);
+    transition: background 0.3s ease-in-out;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 60px;
+    top: 15px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+/* Buttons */
+button, .cta-button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover, .cta-button:hover {
+    background: var(--button-hover);
+    transform: scale(1.05);
+    box-shadow: 0 0 12px var(--button-hover);
+}
+/* Ensure project cards change colors */
+.project-card {
+    background-color: var(--card-bg);
+    transition: background 0.3s ease-in-out;
+}
+
+

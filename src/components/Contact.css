@@ -1,0 +1,85 @@
+.contact {
+  background: var(--contact-bg);
+  color: var(--text-color);
+  text-align: center;
+  padding: 80px 20px;
+  transition: background 0.3s, color 0.3s;
+}
+  
+  .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  input,
+  textarea {
+    background: var(--card-bg) !important;
+  }
+  
+  input:focus, textarea:focus {
+    border: 1px solid var(--button-hover);
+    box-shadow: 0 0 10px var(--button-hover);
+}
+
+  input::placeholder,
+  textarea::placeholder{
+    color: var(--card-text) ;
+
+  }
+  textarea {
+    height: 120px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    /* color: white;
+    background-color: #00bcd4; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  /* button:hover {
+    background-color: #0097a7;
+  } */
+  
+  @media (max-width: 768px) {
+    input,
+    textarea {
+      font-size: 1rem;
+      padding: 8px;
+    }
+  
+    button {
+      font-size: 1rem !important;
+      padding: 10px;
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+    }
+    
+  }
+  
+  @media (max-width: 400px) {
+    .contact h2 {
+      font-size: 1.8rem;
+    }
+    .contact p {
+      font-size: 1rem;
+    }
+  }

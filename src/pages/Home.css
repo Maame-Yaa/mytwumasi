@@ -1,0 +1,37 @@
+
+  
+    /* CTA Button */
+  .cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #00bcd4, #007b9e);
+    color: #fff;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+    
+  /* Contact Form */
+  .contact form {
+    max-width: 500px;
+    margin: auto;
+    background: var(--input-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    
+  }
+  
+  /* Footer Styling */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #0d0d0d;
+    color: #bbb;
+    margin-top: 50px;
+    font-size: 0.9rem;
+  }
+  

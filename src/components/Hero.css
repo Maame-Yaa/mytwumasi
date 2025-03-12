@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--hero-bg) ;
+
+  color: var(--text-color);
+  position: relative;
+  /* transition: background 0.3s ease-in-out, color 0.3s ease-in-out; */
+}
+
+  
+  /* .hero h1 {
+    font-size: 3rem;
+    color: var(--card-heading);
+    margin-bottom: 15px;
+  }
+ */
+  .intro-text {
+    font-size:2.5rem; /* Regular size */
+    /* font-weight: 400;  */
+    color: var(--card-heading); /* Slightly muted color */
+    font-family: 'Cabinet Grotesk', sans-serif;
+    display: block;
+    
+  }
+  
+  
+  /* .highlight {
+    background: linear-gradient(135deg, #37E0F5, #5E3AFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  } */
+
+  .name-highlight {
+    font-size: 6rem; /* Large to take up space */
+    /* font-weight: 700; Strong emphasis */
+    font-family: 'Cabinet Grotesk', sans-serif;    
+    background: linear-gradient(135deg, #37E0F5, #5E3AFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    display: block;
+  }
+/*   
+  /* .hero p {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    margin-bottom: 25px;
+  } */ 
+
+
+.typed-container {
+  display: inline-block;
+}
+
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    /* color: white;
+    background-color: #00bcd4; */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  /* .cta-button:hover {
+    background-color: #0097a7;
+  } */
+
+  .cta-button:hover {
+    background: linear-gradient(135deg, #007b9e, #00bcd4);
+    transform: scale(1.08);
+  }
+
+    
+/* Bottom Left Gradient */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(94,58,255,0.8), rgba(22,22,22,0));
+  bottom: -100px;
+  left: -100px;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+  animation: blob-move 8s infinite ease-in-out alternate;
+}
+
+/* First Irregular Blurb (Bottom Left) */
+/* .hero::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(94, 58, 255, 0.8), rgba(22, 22, 22, 0));
+  bottom: 50px;
+  left: -100px;
+  border-radius: 50% 40% 60% 50%;
+  filter: blur(100px);
+  z-index: 1;
+  animation: blob-move 8s infinite ease-in-out alternate;
+} */
+
+/* Top Right Gradient */
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(55,224,245,0.8), rgba(22,22,22,0));
+  top: 80px;
+  right: 50px;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+  animation: blob-move-reverse 10s infinite ease-in-out alternate;
+}
+
+/* Blobs animation */
+@keyframes blob-move {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  50% {
+    transform: translateX(-30px) translateY(30px) scale(1.1);
+  }
+  100% {
+    transform: translateX(50px) translateY(-50px) scale(0.9);
+  }
+}
+
+@keyframes blob-move-reverse {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  50% {
+    transform: translateX(40px) translateY(-40px) scale(1.05);
+  }
+  100% {
+    transform: translateX(-30px) translateY(30px) scale(0.95);
+  }
+}
+
+/* .hero-blurb img{
+  position: absolute;
+  top: 44%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;  
+  height: auto;
+  opacity: 0.8;
+  z-index: 0;  
+  pointer-events: none;  
+}
+
+.hero h1, .hero p, .cta-button {
+  position: relative;
+  z-index: 2;  
+}
+   */
+
+
+   @keyframes floatBlur {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translate(20px, -30px);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-10px, 20px);
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes floatdot {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translate(-10px, 20px);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(20px, -30px);
+      opacity: 0.7;
+    }
+  }
+  
+  .floating-blur {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* filter: blur(80px); */
+    /* opacity: 0.8; */
+    animation: floatBlur 10s infinite alternate ease-in-out;
+    z-index: 1;
+  }
+
+  .floating-dot {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* filter: blur(80px); */
+    /* opacity: 0.8; */
+    animation: floatdot 10s infinite alternate ease-in-out;
+    z-index: 1;
+  }
+  
+  /* Different colors for different blurs */
+  .blur1 {
+    background: radial-gradient(circle, rgba(110, 77, 255, 0.8), rgba(22,22,22,0));
+    top: 30%;
+    left: 20%;
+  }
+  .blur2 {
+    background: radial-gradient(circle, rgba(55,224,245,0.8), rgba(22,22,22,0));
+    bottom: 20%;
+    right: 25%;
+  }
+
+  .dot img{
+    width: 150px;
+    height: 150px;
+  }
+
+   .dot2 img{
+    width: 85px;
+    height: 85;
+  }
+
+  .dot{
+    bottom: 20%;
+    left: 25%;
+  }
+  
+  .dot2{
+    top: 25%;
+    right: 35%;
+  }
+
+  @media screen and (max-width: 927px) {
+    .name-highlight{
+      font-size: 4rem;
+    }
+
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero {
+      padding: 50px 10px;  /* Add some padding for smaller screens */
+    }
+  
+    /* .hero h1 {
+      font-size: 2rem !important; 
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    .hero p {
+      font-size: 1.2rem !important;
+      text-align: center;
+      margin-bottom: 20px;
+    } */
+
+    .intro-text{
+      font-size: 1.5rem ;
+    }
+
+    .name-highlight{
+      font-size: 3rem;
+    }
+
+  
+    .cta-button {
+      font-size: 1rem !important;
+      padding: 10px 20px;
+      width: 80%; /* Make button more touch-friendly */
+      max-width: 250px;
+    }
+
+    .hero::before,
+    .hero::after {
+      width: 200px;
+      height: 200px;
+      filter: blur(50px);
+
+    }
+  
+
+  }
+
+  @media screen and (max-width: 500px) {
+    .floating-dot {
+      width: 30px;
+      height: 30px;
+  }
+  
+  .dot img{
+    width: 100px;
+    height: 100px;
+  }
+
+   .dot2 img{
+    width: 55px;
+    height: 55;
+  }
+
+
+  }
+
+  @media screen and (max-width: 400px) {
+    .hero::before,
+    .hero::after {
+      width: 100px;
+      height: 100px;
+      filter: blur(30px);
+    }
+
+    .hero::before {
+      bottom: 100px;
+      left: 10px;
+    }
+    
+
+  }
+  
+  
