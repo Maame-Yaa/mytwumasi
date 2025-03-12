@@ -11,7 +11,7 @@ import { ThemeProvider } from "./context/ThemeContext"; // Import ThemeProvider
 function App() {
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename="/mytwumasi">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
