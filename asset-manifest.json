@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mytwumasi/static/css/main.a811d8a3.css",
+    "main.js": "/mytwumasi/static/js/main.f334a91f.js",
+    "index.html": "/mytwumasi/index.html",
+    "main.a811d8a3.css.map": "/mytwumasi/static/css/main.a811d8a3.css.map",
+    "main.f334a91f.js.map": "/mytwumasi/static/js/main.f334a91f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a811d8a3.css",
+    "static/js/main.f334a91f.js"
+  ]
+}
