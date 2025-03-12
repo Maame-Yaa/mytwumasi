@@ -3,7 +3,7 @@ name: Deploy React to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change if needed
+      - main  # Make sure this is your branch
 
 permissions:
   contents: read
@@ -28,10 +28,10 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v1
         with:
-          path: ./build  # Change to "dist" if using Vite
+          path: ./build  # Ensure React builds into this folder
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
