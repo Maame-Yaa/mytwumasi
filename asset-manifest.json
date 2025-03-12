@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/mytwumasi/static/css/main.a811d8a3.css",
-    "main.js": "/mytwumasi/static/js/main.ffd103a7.js",
+    "main.js": "/mytwumasi/static/js/main.f95684b3.js",
     "index.html": "/mytwumasi/index.html",
     "main.a811d8a3.css.map": "/mytwumasi/static/css/main.a811d8a3.css.map",
-    "main.ffd103a7.js.map": "/mytwumasi/static/js/main.ffd103a7.js.map"
+    "main.f95684b3.js.map": "/mytwumasi/static/js/main.f95684b3.js.map"
   },
   "entrypoints": [
     "static/css/main.a811d8a3.css",
-    "static/js/main.ffd103a7.js"
+    "static/js/main.f95684b3.js"
   ]
 }
