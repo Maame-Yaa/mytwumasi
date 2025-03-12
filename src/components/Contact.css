@@ -57,6 +57,28 @@
     background-color: #0097a7;
   } */
   
+  .flip-container {
+    perspective: 1000px;
+  }
+  
+  .contact-form, .success-message {
+    backface-visibility: hidden;
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  .success-message {
+    text-align: center;
+    padding: 20px;
+    /* background: rgba(255, 255, 255, 0.1); */
+    border-radius: 12px;
+    /* box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3); */
+  }
+  
+  .success-message p {
+    color: var(--subtext-color);
+    font-size: 1.2rem;
+  }
+
   @media (max-width: 768px) {
     input,
     textarea {
