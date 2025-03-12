@@ -11,9 +11,9 @@
 
   .skills h2 {
     font-size: 2rem;
-    color: var(--card-heading);
+    color: var(--skills-hd);
     margin-bottom: 50px;
-    font-style: italic;
+    font-weight: 300;
   }
 
   .skills h3{
